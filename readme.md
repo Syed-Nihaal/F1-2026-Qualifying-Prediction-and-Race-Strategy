@@ -45,30 +45,30 @@ The same workflow pattern is used in each round folder:
 ```text
 .
 |-- readme.md
-|-- Round 1 Australian GP 2026/
-|   |-- F1 2026 Australian GP Qualifying and Race Strategy.ipynb
+|-- Round_1_Australian_GP_2026/
+|   |-- F1_2026_Australian_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_australian_gp_combined_laps.csv
 |   |-- f1_2026_australian_gp_cleaned_laps.csv
 |   |-- f1_2026_australian_gp_qualifying_laps.csv
 |   |-- f1_2026_australian_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_australian_gp_top_teams_laps.csv
 |   |-- f1_2026_australian_gp_qualifying_top_teams_laps.csv
-|-- Round 2 Chinese GP 2026/
-|   |-- F1 2026 Chinese GP Qualifying and Race Strategy.ipynb
+|-- Round_2_Chinese_GP_2026/
+|   |-- F1_2026_Chinese_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_chinese_gp_combined_laps.csv
 |   |-- f1_2026_chinese_gp_cleaned_laps.csv
 |   |-- f1_2026_chinese_gp_qualifying_laps.csv
 |   |-- f1_2026_chinese_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_chinese_gp_top_teams_laps.csv
 |   |-- f1_2026_chinese_gp_qualifying_top_teams_laps.csv
-`-- Round 3 Japanese GP 2026/
-    |-- F1 2026 Japanese GP Qualifying and Race Strategy.ipynb
-    |-- f1_2026_japanese _gp_combined_laps.csv
-    |-- f1_2026_japanese _gp_cleaned_laps.csv
-    |-- f1_2026_japanese _gp_qualifying_laps.csv
-    |-- f1_2026_japanese _gp_qualifying_cleaned_laps.csv
-    |-- f1_2026_japanese _gp_top_teams_laps.csv
-    |-- f1_2026_japanese _gp_qualifying_top_teams_laps.csv
+`-- Round_3_Japanese_GP_2026/
+    |-- F1_2026_Japanese_GP_Qualifying_and_Race_Strategy.ipynb
+    |-- f1_2026_japanese_gp_combined_laps.csv
+    |-- f1_2026_japanese_gp_cleaned_laps.csv
+    |-- f1_2026_japanese_gp_qualifying_laps.csv
+    |-- f1_2026_japanese_gp_qualifying_cleaned_laps.csv
+    |-- f1_2026_japanese_gp_top_teams_laps.csv
+    |-- f1_2026_japanese_gp_qualifying_top_teams_laps.csv
 ```
 
 ## Requirements
