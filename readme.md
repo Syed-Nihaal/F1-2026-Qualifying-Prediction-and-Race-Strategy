@@ -34,6 +34,44 @@ Each round notebook builds a data pipeline from FastF1 session data, cleans lap-
 | Round 21 | Qatar GP 2026 | 27 - 29 NOV | None |
 | Round 22 | Abu Dhabi GP 2026 | 04 - 06 DEC | None |
 
+## Changes from 2025 Season
+
+### Technical & System Changes
+
+| Category | Change / Feature | Notes |
+| --- | --- | --- |
+| Power Unit (PU) Overhaul | 50/50 Hybrid Split | Power comes roughly equally from the V6 internal combustion engine (ICE) and the electric motor. |
+| | Increased Electrical Power | The MGU-K (Motor Generator Unit – Kinetic) output increased from 120 kW to 350 kW. |
+| | Simplified Engine | The MGU-H (Motor Generator Unit – Heat) has been completely removed. |
+| | 100% Sustainable Fuel | All cars run on fully carbon-neutral fuel. |
+| Active Aerodynamics | Replaces DRS | Driver-switched movable front and rear wings. |
+| | Corner Mode | High-downforce wings. |
+| | Straight Mode | Low-downforce wings. |
+| New Driver-Controlled Systems | Overtake Mode | Deploys extra electrical power when within 1 second of the car ahead. |
+| | Boost Mode | Driver button giving maximum combined ICE and battery power for attack or defense. |
+| | Recharge Mode | Allows drivers to recharge the battery via braking and lifting at the end of straights. |
+
+### Team & Driver Lineup Changes
+
+| Team | Driver | Notes |
+| --- | --- | --- |
+| Red Bull Racing | Isack Hadjar | Promoted from Racing Bulls replacing Yuki Tsunoda. |
+| Red Bull Racing | Yuki Tsunoda | Demoted to reserve test driver. |
+| Racing Bulls | Arvid Lindblad | Replacing Isack Hadjar. |
+| Audi | Nico Hulkenberg & Gabriel Bortoleto | Rebranded from Kick Sauber. |
+| Cadillac | Sergio Perez & Valtteri Bottas | New entry with returning drivers. |
+
+### Engine Supplier Changes
+
+| Team | Old Engine Supplier | New Engine Supplier |
+| --- | --- | --- |
+| Red Bull Racing | Red Bull-Honda Powertrains | Red Bull-Ford Powertrains |
+| Racing Bulls | Red Bull-Honda Powertrains | Red Bull-Ford Powertrains |
+| Audi | Ferrari (As Kick Sauber) | Audi |
+| Aston Martin | Mercedes AMG Powertrains | Aston Martin-Honda |
+| Alpine | Renault | Mercedes AMG Powertrains |
+| Cadillac | | Ferrari |
+
 ## Workflow
 
 The same workflow pattern is used in each round folder:
@@ -52,24 +90,45 @@ The same workflow pattern is used in each round folder:
 |-- readme.md
 |-- Round_1_Australian_GP_2026/
 |   |-- F1_2026_Australian_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_australian_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_australian_gp_pre_clean_data/
 |   |-- f1_2026_australian_gp_combined_laps.csv
 |   |-- f1_2026_australian_gp_cleaned_laps.csv
 |   |-- f1_2026_australian_gp_qualifying_laps.csv
 |   |-- f1_2026_australian_gp_qualifying_cleaned_laps.csv
 |-- Round_2_Chinese_GP_2026/
 |   |-- F1_2026_Chinese_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_chinese_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_chinese_gp_pre_clean_data/
 |   |-- f1_2026_chinese_gp_combined_laps.csv
 |   |-- f1_2026_chinese_gp_cleaned_laps.csv
 |   |-- f1_2026_chinese_gp_qualifying_laps.csv
 |   |-- f1_2026_chinese_gp_qualifying_cleaned_laps.csv
 |-- Round_3_Japanese_GP_2026/
 |   |-- F1_2026_Japanese_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_japanese_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_japanese_gp_pre_clean_data/
 |   |-- f1_2026_japanese_gp_combined_laps.csv
 |   |-- f1_2026_japanese_gp_cleaned_laps.csv
 |   |-- f1_2026_japanese_gp_qualifying_laps.csv
 |   |-- f1_2026_japanese_gp_qualifying_cleaned_laps.csv
+|-- Round_4_Miami_GP_2026/
+|   |-- F1_2026_Miami_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_miami_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_miami_gp_pre_clean_data/
+|   |-- f1_2026_miami_gp_combined_laps.csv
+|   |-- f1_2026_miami_gp_cleaned_laps.csv
+|   |-- f1_2026_miami_gp_qualifying_laps.csv
+|   |-- f1_2026_miami_gp_qualifying_cleaned_laps.csv
 `-- Testing_1&2_Bahrain_2026/
     |-- F1_2026_Testing_1&2_Bahrain__Baseline_Benchmarking.ipynb
+    |-- f1_2026_testing_1&2_cache/
+    |   `-- 2026/
+    |-- f1_2026_testing_1&2_pre_clean_data/
     |-- f1_2026_testing_1&2_combined_laps.csv
     `-- f1_2026_testing_1&2_cleaned_laps.csv
 ```
@@ -115,13 +174,13 @@ Subsequent runs will reuse cached files for faster execution.
 
 Notes:
 
-- Keep cache folders if you want reproducible reruns without re-downloading.
+- Keep cache folders if you want reproducible reruns without re-downloading. (Deleted Testing_1&2_Bahrain_2026 cache in the repository due to large file size.)
 - Delete a round cache folder if you want a fresh pull of FastF1 data.
 - Ensure cache directories exist before enabling cache in code.
 
 ## Cleaning Process
 
-Data cleaning is implemented in `template.py` through a reusable `data_cleaning(data, output_csv_path)` function and is applied to both practice and qualifying lap datasets.
+Data cleaning is implemented through a reusable `data_cleaning(data, output_csv_path)` function and is applied to both practice and qualifying lap datasets.
 
 Main steps:
 
@@ -158,9 +217,9 @@ Target:
 
 Data selection and filtering:
 
-1. Start from cleaned all-team practice data.
+1. Start from cleaned all-team practice data and previous year qualifying data.
 2. Remove extreme lap-time tails by keeping only the 5th to 95th percentile range.
-3. Restrict training rows to `SOFT` compound laps (qualifying-style focus).
+3. Restrict training rows to `SOFT` and `FreshTyre = True` compound laps (qualifying-style focus).
 4. Drop rows with missing required feature or target values.
 
 Feature engineering approach:
@@ -168,7 +227,7 @@ Feature engineering approach:
 - Numeric base features:
   - `LapNumber`, `TyreLife`, `Stint`
 - Optional telemetry/speed features (only if present and numeric):
-  - `SpeedST`, `SpeedI1`, `SpeedI2`, `SpeedFL`, `Throttle`, `Brake`, `DRS`
+  - `SpeedST`, `SpeedI1`, `SpeedI2`, `SpeedFL`, `Throttle`, `Brake`
 - Categorical features:
   - `Compound`, `Driver`, `Team`, `Session`, `TrackStatus`
 
