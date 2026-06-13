@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>F1 2026 Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div>
+        <h1>F1 2026 — Qualifying & Race Strategy</h1>
+      </div>
+
+      <div class="controls">
+        <div class="control">
+          <label for="roundSelect">Round name</label>
+          <select id="roundSelect"></select>
+        </div>
+
+        <div class="control">
+          <label for="plotSelect">Plot</label>
+          <select id="plotSelect"></select>
+        </div>
+      </div>
+    </section>
+
+    <section class="viewport">
+      <div class="status" id="status">
+        <div>Loading dashboard...</div>
+        <span id="selectionMeta"></span>
+      </div>
+
+      <div class="frame">
+        <img id="plotImage" alt="Selected plot" />
+      </div>
+
+      <div class="caption">
+        <strong id="plotTitle"></strong>
+        <div class="path" id="plotPath"></div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const DEFAULT_KEY = 'qualifying_sensitivity';
+
+    const state = {
+      rounds: [],
+      roundIndex: new Map(),
+      selectedRoundSlug: null,
+    };
+
+    const roundSelect = document.getElementById('roundSelect');
+    const plotSelect = document.getElementById('plotSelect');
+    const status = document.getElementById('status');
+    const selectionMeta = document.getElementById('selectionMeta');
+    const plotImage = document.getElementById('plotImage');
+    const plotTitle = document.getElementById('plotTitle');
+    const plotPath = document.getElementById('plotPath');
+
+    function prettyName(filePath) {
+      const fileName = filePath.split('/').pop() || filePath;
+      return fileName
+        .replace(/^f1_2026_/i, '')
+        .replace(/^f1_2024_/i, '')
+        .replace(/\.png$/i, '')
+        .replace(/_/g, ' ')
+        .replace(/\bgp\b/i, 'GP');
+    }
+
+    function webPathFromManifestPath(filePath) {
+      const normalized = filePath.replace(/\\/g, '/');
+      const docsIndex = normalized.lastIndexOf('/docs/');
+      return docsIndex >= 0 ? normalized.slice(docsIndex + '/docs/'.length) : normalized;
+    }
+
+    function keyFromPath(filePath) {
+      return filePath.split('/').pop().toLowerCase();
+    }
+
+    function buildRoundOptions() {
+      roundSelect.innerHTML = '';
+      for (const round of state.rounds) {
+        const option = document.createElement('option');
+        option.value = round.slug;
+        option.textContent = round.name;
+        roundSelect.appendChild(option);
+      }
+    }
+
+    function buildPlotOptions(round) {
+      plotSelect.innerHTML = '';
+      round.plots.forEach((plotPath) => {
+        const option = document.createElement('option');
+        option.value = plotPath;
+        option.textContent = prettyName(plotPath);
+        plotSelect.appendChild(option);
+      });
+    }
+
+    function pickDefaultPlot(round) {
+      return round.plots.find((plotPath) => keyFromPath(plotPath).includes(DEFAULT_KEY)) || round.plots[0] || null;
+    }
+
+    function renderPlot(plotPath) {
+      const round = state.roundIndex.get(state.selectedRoundSlug);
+      if (!round || !plotPath) {
+        return;
+      }
+
+      const webPath = webPathFromManifestPath(plotPath);
+      const title = prettyName(plotPath);
+
+      plotImage.src = webPath;
+      plotImage.alt = title;
+      plotTitle.textContent = title;
+      plotPath.textContent = webPath;
+      selectionMeta.textContent = `${round.name} · ${round.plots.length} plots available`;
+      status.firstElementChild.textContent = `Showing ${round.name}`;
+    }
+
+    function selectRound(roundSlug, preferredPlotPath = null) {
+      const round = state.roundIndex.get(roundSlug);
+      if (!round) {
+        return;
+      }
+
+      state.selectedRoundSlug = roundSlug;
+      buildPlotOptions(round);
+
+      const plotPath = preferredPlotPath && round.plots.includes(preferredPlotPath)
+        ? preferredPlotPath
+        : pickDefaultPlot(round);
+
+      if (plotPath) {
+        plotSelect.value = plotPath;
+        renderPlot(plotPath);
+      }
+    }
+
+    async function loadDashboard() {
+      const index = await fetch('data/index.json').then((response) => response.json());
+      state.rounds = index.rounds || [];
+      state.roundIndex = new Map(state.rounds.map((round) => [round.slug, round]));
+
+      buildRoundOptions();
+
+      const firstRound = state.rounds[0];
+      if (!firstRound) {
+        status.firstElementChild.textContent = 'No rounds found';
+        selectionMeta.textContent = '';
+        return;
+      }
+
+      roundSelect.value = firstRound.slug;
+      selectRound(firstRound.slug);
+
+      roundSelect.addEventListener('change', () => selectRound(roundSelect.value));
+      plotSelect.addEventListener('change', () => renderPlot(plotSelect.value));
+    }
+
+    loadDashboard().catch((error) => {
+      status.firstElementChild.textContent = 'Failed to load dashboard';
+      selectionMeta.textContent = '';
+    });
+  </script>
+</body>
+</html>
