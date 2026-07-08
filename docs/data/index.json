@@ -9,12 +9,14 @@
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_lap_time_distribution.png",
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_lap_time_progression_by_session.png",
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_laps_per_driver_compound.png",
+        "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_laptime_by_tracktemp_compound.png",
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_qualifying_model_comparison.png",
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_qualifying_sensitivity.png",
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_race_strategy.png",
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_speed_colored_track_map.png",
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_speed_trap_trends.png",
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_stint_pace_trends.png",
+        "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_thermal_degradation_eda.png",
         "data/r1_australian_gp_2026/plots/f1_2026_australian_gp_tyre_degradation_model_comparison.png"
       ]
     },
@@ -27,12 +29,14 @@
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_lap_time_distribution.png",
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_lap_time_progression_by_session.png",
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_laps_per_driver_compound.png",
+        "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_laptime_by_tracktemp_compound.png",
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_qualifying_model_comparison.png",
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_qualifying_sensitivity.png",
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_race_strategy.png",
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_speed_colored_track_map.png",
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_speed_trap_trends.png",
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_stint_pace_trends.png",
+        "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_thermal_degradation_eda.png",
         "data/r2_chinese_gp_2026/plots/f1_2026_chinese_gp_tyre_degradation_model_comparison.png"
       ]
     },
@@ -45,12 +49,14 @@
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_lap_time_distribution.png",
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_lap_time_progression_by_session.png",
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_laps_per_driver_compound.png",
+        "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_laptime_by_tracktemp_compound.png",
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_qualifying_model_comparison.png",
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_qualifying_sensitivity.png",
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_race_strategy.png",
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_speed_colored_track_map.png",
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_speed_trap_trends.png",
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_stint_pace_trends.png",
+        "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_thermal_degradation_eda.png",
         "data/r3_japanese_gp_2026/plots/f1_2026_japanese_gp_tyre_degradation_model_comparison.png"
       ]
     },
@@ -63,12 +69,14 @@
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_lap_time_distribution.png",
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_lap_time_progression_by_session.png",
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_laps_per_driver_compound.png",
+        "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_laptime_by_tracktemp_compound.png",
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_qualifying_model_comparison.png",
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_qualifying_sensitivity.png",
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_race_strategy.png",
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_speed_colored_track_map.png",
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_speed_trap_trends.png",
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_stint_pace_trends.png",
+        "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_thermal_degradation_eda.png",
         "data/r4_miami_gp_2026/plots/f1_2026_miami_gp_tyre_degradation_model_comparison.png"
       ]
     },
@@ -80,11 +88,13 @@
         "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_lap_time_distribution.png",
         "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_lap_time_progression_by_session.png",
         "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_laps_per_driver_compound.png",
+        "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_laptime_by_tracktemp_compound.png",
         "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_qualifying_model_comparison.png",
         "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_qualifying_sensitivity.png",
         "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_race_strategy.png",
         "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_speed_trap_trends.png",
         "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_stint_pace_trends.png",
+        "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_thermal_degradation_eda.png",
         "data/r5_canadian_gp_2026/plots/f1_2026_canadian_gp_tyre_degradation_model_comparison.png"
       ]
     },
@@ -97,12 +107,72 @@
         "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_lap_time_distribution.png",
         "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_lap_time_progression_by_session.png",
         "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_laps_per_driver_compound.png",
+        "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_laptime_by_tracktemp_compound.png",
         "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_qualifying_model_comparison.png",
         "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_qualifying_sensitivity.png",
+        "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_race_strategy.png",
         "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_speed_colored_track_map.png",
         "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_speed_trap_trends.png",
         "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_stint_pace_trends.png",
+        "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_thermal_degradation_eda.png",
         "data/r6_monaco_gp_2026/plots/f1_2026_monaco_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
+      "name": "R7 Spanish GP 2026",
+      "slug": "r7_spanish_gp_2026",
+      "plots": [
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_compound_performance.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_lap_time_distribution.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_lap_time_progression_by_session.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_laps_per_driver_compound.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_laptime_by_tracktemp_compound.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_qualifying_model_comparison.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_qualifying_sensitivity.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_race_strategy.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_speed_colored_track_map.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_speed_trap_trends.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_stint_pace_trends.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_thermal_degradation_eda.png",
+        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
+      "name": "R8 Austrian GP 2026",
+      "slug": "r8_austrian_gp_2026",
+      "plots": [
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_compound_performance.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_lap_time_distribution.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_lap_time_progression_by_session.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_laps_per_driver_compound.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_laptime_by_tracktemp_compound.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_qualifying_model_comparison.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_qualifying_sensitivity.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_race_strategy.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_speed_colored_track_map.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_speed_trap_trends.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_stint_pace_trends.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_thermal_degradation_eda.png",
+        "data/r8_austrian_gp_2026/plots/f1_2026_austrian_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
+      "name": "R9 British GP 2026",
+      "slug": "r9_british_gp_2026",
+      "plots": [
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_compound_performance.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_lap_time_distribution.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_lap_time_progression_by_session.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_laps_per_driver_compound.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_qualifying_model_comparison.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_qualifying_sensitivity.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_race_strategy.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_speed_trap_trends.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_stint_pace_trends.png",
+        "data/r9_british_gp_2026/plots/f1_2026_british_gp_tyre_degradation_model_comparison.png"
       ]
     }
   ]

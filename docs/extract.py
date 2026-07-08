@@ -61,6 +61,27 @@ ROUND_ARTIFACTS: tuple[RoundArtifacts, ...] = (
         / "f1_2026_monaco_gp_plots",
         output_slug="r6_monaco_gp_2026",
     ),
+    RoundArtifacts(
+        name="R7 Spanish GP 2026",
+        source_plot_dir=PROJECT_DIR
+        / "Round_7_Spanish_GP_2026"
+        / "f1_2026_spanish_gp_plots",
+        output_slug="r7_spanish_gp_2026",
+    ),
+    RoundArtifacts(
+        name="R8 Austrian GP 2026",
+        source_plot_dir=PROJECT_DIR
+        / "Round_8_Austrian_GP_2026"
+        / "f1_2026_austrian_gp_plots",
+        output_slug="r8_austrian_gp_2026",
+    ),
+    RoundArtifacts(
+        name="R9 British GP 2026",
+        source_plot_dir=PROJECT_DIR
+        / "Round_9_British_GP_2026"
+        / "f1_2026_british_gp_plots",
+        output_slug="r9_british_gp_2026",
+    ),
 )
 
 # Copy files with the given suffixes from source_dir into destination_dir

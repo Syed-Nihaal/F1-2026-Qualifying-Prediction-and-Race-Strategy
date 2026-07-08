@@ -124,6 +124,51 @@ The same workflow pattern is used in each round folder:
 |   |-- f1_2026_miami_gp_cleaned_laps.csv
 |   |-- f1_2026_miami_gp_qualifying_laps.csv
 |   |-- f1_2026_miami_gp_qualifying_cleaned_laps.csv
+|-- Round_5_Canadian_GP_2026/
+|   |-- F1_2026_Canadian_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_canadian_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_canadian_gp_pre_clean_data/
+|   |-- f1_2026_canadian_gp_combined_laps.csv
+|   |-- f1_2026_canadian_gp_cleaned_laps.csv
+|   |-- f1_2026_canadian_gp_qualifying_laps.csv
+|   |-- f1_2026_canadian_gp_qualifying_cleaned_laps.csv
+|-- Round_6_Monaco_GP_2026/
+|   |-- F1_2026_Monaco_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_monaco_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_monaco_gp_pre_clean_data/
+|   |-- f1_2026_monaco_gp_combined_laps.csv
+|   |-- f1_2026_monaco_gp_cleaned_laps.csv
+|   |-- f1_2026_monaco_gp_qualifying_laps.csv
+|   |-- f1_2026_monaco_gp_qualifying_cleaned_laps.csv
+|-- Round_7_Barcelona-Catalunya_GP_2026/
+|   |-- F1_2026_Barcelona-Catalunya_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_barcelona-catalunya_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_barcelona-catalunya_gp_pre_clean_data/
+|   |-- f1_2026_barcelona-catalunya_gp_combined_laps.csv
+|   |-- f1_2026_barcelona-catalunya_gp_cleaned_laps.csv
+|   |-- f1_2026_barcelona-catalunya_gp_qualifying_laps.csv
+|   |-- f1_2026_barcelona-catalunya_gp_qualifying_cleaned_laps.csv
+|-- Round_8_Austrian_GP_2026/
+|   |-- F1_2026_Austrian_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_austrian_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_austrian_gp_pre_clean_data/
+|   |-- f1_2026_austrian_gp_combined_laps.csv
+|   |-- f1_2026_austrian_gp_cleaned_laps.csv
+|   |-- f1_2026_austrian_gp_qualifying_laps.csv
+|   |-- f1_2026_austrian_gp_qualifying_cleaned_laps.csv
+|-- Round_9_British_GP_2026/
+|   |-- F1_2026_British_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_british_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_british_gp_pre_clean_data/
+|   |-- f1_2026_british_gp_combined_laps.csv
+|   |-- f1_2026_british_gp_cleaned_laps.csv
+|   |-- f1_2026_british_gp_qualifying_laps.csv
+|   |-- f1_2026_british_gp_qualifying_cleaned_laps.csv
 `-- Testing_1&2_Bahrain_2026/
     |-- F1_2026_Testing_1&2_Bahrain__Baseline_Benchmarking.ipynb
     |-- f1_2026_testing_1&2_cache/
@@ -174,7 +219,7 @@ Subsequent runs will reuse cached files for faster execution.
 
 Notes:
 
-- Keep cache folders if you want reproducible reruns without re-downloading. (Deleted Testing_1&2_Bahrain_2026 cache in the repository due to large file size.)
+- Keep cache folders if you want reproducible reruns without re-downloading.
 - Delete a round cache folder if you want a fresh pull of FastF1 data.
 - Ensure cache directories exist before enabling cache in code.
 
