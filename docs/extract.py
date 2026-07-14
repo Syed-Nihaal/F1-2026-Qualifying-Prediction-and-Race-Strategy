@@ -62,11 +62,11 @@ ROUND_ARTIFACTS: tuple[RoundArtifacts, ...] = (
         output_slug="r6_monaco_gp_2026",
     ),
     RoundArtifacts(
-        name="R7 Spanish GP 2026",
+        name="R7 Barcelona-Catalunya GP 2026",
         source_plot_dir=PROJECT_DIR
-        / "Round_7_Spanish_GP_2026"
-        / "f1_2026_spanish_gp_plots",
-        output_slug="r7_spanish_gp_2026",
+        / "Round_7_Barcelona_Catalunya_GP_2026"
+        / "f1_2026_barcelona_catalunya_gp_plots",
+        output_slug="r7_barcelona_catalunya_gp_2026",
     ),
     RoundArtifacts(
         name="R8 Austrian GP 2026",

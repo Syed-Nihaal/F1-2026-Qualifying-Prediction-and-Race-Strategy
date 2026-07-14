@@ -119,23 +119,23 @@
       ]
     },
     {
-      "name": "R7 Spanish GP 2026",
-      "slug": "r7_spanish_gp_2026",
+      "name": "R7 Barcelona-Catalunya GP 2026",
+      "slug": "r7_barcelona_catalunya_gp_2026",
       "plots": [
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_compound_performance.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_fastest_telemetry_speed_vs_distance.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_lap_time_distribution.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_lap_time_progression_by_session.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_laps_per_driver_compound.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_laptime_by_tracktemp_compound.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_qualifying_model_comparison.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_qualifying_sensitivity.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_race_strategy.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_speed_colored_track_map.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_speed_trap_trends.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_stint_pace_trends.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_thermal_degradation_eda.png",
-        "data/r7_spanish_gp_2026/plots/f1_2026_spanish_gp_tyre_degradation_model_comparison.png"
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_compound_performance.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_lap_time_distribution.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_lap_time_progression_by_session.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_laps_per_driver_compound.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_laptime_by_tracktemp_compound.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_qualifying_model_comparison.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_qualifying_sensitivity.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_race_strategy.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_speed_colored_track_map.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_speed_trap_trends.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_stint_pace_trends.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_thermal_degradation_eda.png",
+        "data/r7_barcelona_catalunya_gp_2026/plots/f1_2026_barcelona_catalunya_gp_tyre_degradation_model_comparison.png"
       ]
     },
     {

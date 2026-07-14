@@ -85,96 +85,120 @@ The same workflow pattern is used in each round folder:
 ## Repository Structure
 
 ```text
-.
 |-- LICENSE
 |-- readme.md
+|-- docs/
+|   |-- extract.py
+|   |-- index.html
+|   |-- style.css
+|   |-- data/
+|   |   `-- index.json
 |-- Round_1_Australian_GP_2026/
 |   |-- F1_2026_Australian_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_australian_gp_cache/
 |   |   `-- 2026/
+|   |-- f1_2026_australian_gp_plots/
 |   |-- f1_2026_australian_gp_pre_clean_data/
-|   |-- f1_2026_australian_gp_combined_laps.csv
+|   |   |-- f1_2026_australian_gp_combined_laps.csv
+|   |   |-- f1_2026_australian_gp_qualifying_laps.csv
+|   |   `-- f1_2025_australian_gp_qualifying_laps.csv
 |   |-- f1_2026_australian_gp_cleaned_laps.csv
-|   |-- f1_2026_australian_gp_qualifying_laps.csv
 |   |-- f1_2026_australian_gp_qualifying_cleaned_laps.csv
 |-- Round_2_Chinese_GP_2026/
 |   |-- F1_2026_Chinese_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_chinese_gp_cache/
 |   |   `-- 2026/
+|   |-- f1_2026_chinese_gp_plots/
 |   |-- f1_2026_chinese_gp_pre_clean_data/
-|   |-- f1_2026_chinese_gp_combined_laps.csv
+|   |   |-- f1_2026_chinese_gp_combined_laps.csv
+|   |   |-- f1_2026_chinese_gp_qualifying_laps.csv
+|   |   `-- f1_2025_chinese_gp_qualifying_laps.csv
 |   |-- f1_2026_chinese_gp_cleaned_laps.csv
-|   |-- f1_2026_chinese_gp_qualifying_laps.csv
 |   |-- f1_2026_chinese_gp_qualifying_cleaned_laps.csv
 |-- Round_3_Japanese_GP_2026/
 |   |-- F1_2026_Japanese_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_japanese_gp_cache/
 |   |   `-- 2026/
+|   |-- f1_2026_japanese_gp_plots/
 |   |-- f1_2026_japanese_gp_pre_clean_data/
-|   |-- f1_2026_japanese_gp_combined_laps.csv
+|   |   |-- f1_2026_japanese_gp_combined_laps.csv
+|   |   |-- f1_2026_japanese_gp_qualifying_laps.csv
+|   |   `-- f1_2025_japanese_gp_qualifying_laps.csv
 |   |-- f1_2026_japanese_gp_cleaned_laps.csv
-|   |-- f1_2026_japanese_gp_qualifying_laps.csv
 |   |-- f1_2026_japanese_gp_qualifying_cleaned_laps.csv
 |-- Round_4_Miami_GP_2026/
 |   |-- F1_2026_Miami_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_miami_gp_cache/
 |   |   `-- 2026/
+|   |-- f1_2026_miami_gp_plots/
 |   |-- f1_2026_miami_gp_pre_clean_data/
-|   |-- f1_2026_miami_gp_combined_laps.csv
+|   |   |-- f1_2026_miami_gp_combined_laps.csv
+|   |   |-- f1_2026_miami_gp_qualifying_laps.csv
+|   |   `-- f1_2025_miami_gp_qualifying_laps.csv
 |   |-- f1_2026_miami_gp_cleaned_laps.csv
-|   |-- f1_2026_miami_gp_qualifying_laps.csv
 |   |-- f1_2026_miami_gp_qualifying_cleaned_laps.csv
 |-- Round_5_Canadian_GP_2026/
 |   |-- F1_2026_Canadian_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_canadian_gp_cache/
 |   |   `-- 2026/
+|   |-- f1_2026_canadian_gp_plots/
 |   |-- f1_2026_canadian_gp_pre_clean_data/
-|   |-- f1_2026_canadian_gp_combined_laps.csv
+|   |   |-- f1_2026_canadian_gp_combined_laps.csv
+|   |   |-- f1_2026_canadian_gp_qualifying_laps.csv
+|   |   `-- f1_2025_canadian_gp_qualifying_laps.csv
 |   |-- f1_2026_canadian_gp_cleaned_laps.csv
-|   |-- f1_2026_canadian_gp_qualifying_laps.csv
 |   |-- f1_2026_canadian_gp_qualifying_cleaned_laps.csv
 |-- Round_6_Monaco_GP_2026/
 |   |-- F1_2026_Monaco_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_monaco_gp_cache/
 |   |   `-- 2026/
+|   |-- f1_2026_monaco_gp_plots/
 |   |-- f1_2026_monaco_gp_pre_clean_data/
-|   |-- f1_2026_monaco_gp_combined_laps.csv
+|   |   |-- f1_2026_monaco_gp_combined_laps.csv
+|   |   |-- f1_2026_monaco_gp_qualifying_laps.csv
+|   |   `-- f1_2025_monaco_gp_qualifying_laps.csv
 |   |-- f1_2026_monaco_gp_cleaned_laps.csv
-|   |-- f1_2026_monaco_gp_qualifying_laps.csv
 |   |-- f1_2026_monaco_gp_qualifying_cleaned_laps.csv
-|-- Round_7_Barcelona-Catalunya_GP_2026/
-|   |-- F1_2026_Barcelona-Catalunya_GP_Qualifying_and_Race_Strategy.ipynb
-|   |-- f1_2026_barcelona-catalunya_gp_cache/
+|-- Round_7_Barcelona_Catalunya_GP_2026/
+|   |-- F1_2026_Barcelona_Catalunya_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_barcelona_catalunya_gp_cache/
 |   |   `-- 2026/
-|   |-- f1_2026_barcelona-catalunya_gp_pre_clean_data/
-|   |-- f1_2026_barcelona-catalunya_gp_combined_laps.csv
-|   |-- f1_2026_barcelona-catalunya_gp_cleaned_laps.csv
-|   |-- f1_2026_barcelona-catalunya_gp_qualifying_laps.csv
-|   |-- f1_2026_barcelona-catalunya_gp_qualifying_cleaned_laps.csv
+|   |-- f1_2026_barcelona_catalunya_gp_plots/
+|   |-- f1_2026_barcelona_catalunya_gp_pre_clean_data/
+|   |   |-- f1_2026_barcelona_catalunya_gp_combined_laps.csv
+|   |   |-- f1_2026_barcelona_catalunya_gp_qualifying_laps.csv
+|   |   `-- f1_2025_barcelona_catalunya_gp_qualifying_laps.csv
+|   |-- f1_2026_barcelona_catalunya_gp_cleaned_laps.csv
+|   |-- f1_2026_barcelona_catalunya_gp_qualifying_cleaned_laps.csv
 |-- Round_8_Austrian_GP_2026/
 |   |-- F1_2026_Austrian_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_austrian_gp_cache/
 |   |   `-- 2026/
+|   |-- f1_2026_austrian_gp_plots/
 |   |-- f1_2026_austrian_gp_pre_clean_data/
-|   |-- f1_2026_austrian_gp_combined_laps.csv
+|   |   |-- f1_2026_austrian_gp_combined_laps.csv
+|   |   |-- f1_2026_austrian_gp_qualifying_laps.csv
+|   |   `-- f1_2025_austrian_gp_qualifying_laps.csv
 |   |-- f1_2026_austrian_gp_cleaned_laps.csv
-|   |-- f1_2026_austrian_gp_qualifying_laps.csv
 |   |-- f1_2026_austrian_gp_qualifying_cleaned_laps.csv
 |-- Round_9_British_GP_2026/
 |   |-- F1_2026_British_GP_Qualifying_and_Race_Strategy.ipynb
 |   |-- f1_2026_british_gp_cache/
 |   |   `-- 2026/
+|   |-- f1_2026_british_gp_plots/
 |   |-- f1_2026_british_gp_pre_clean_data/
-|   |-- f1_2026_british_gp_combined_laps.csv
+|   |   |-- f1_2026_british_gp_combined_laps.csv
+|   |   |-- f1_2026_british_gp_qualifying_laps.csv
+|   |   `-- f1_2025_british_gp_qualifying_laps.csv
 |   |-- f1_2026_british_gp_cleaned_laps.csv
-|   |-- f1_2026_british_gp_qualifying_laps.csv
 |   |-- f1_2026_british_gp_qualifying_cleaned_laps.csv
 `-- Testing_1&2_Bahrain_2026/
     |-- F1_2026_Testing_1&2_Bahrain__Baseline_Benchmarking.ipynb
     |-- f1_2026_testing_1&2_cache/
     |   `-- 2026/
+    |-- f1_2026_testing_1&2_plots/
     |-- f1_2026_testing_1&2_pre_clean_data/
-    |-- f1_2026_testing_1&2_combined_laps.csv
+    |   `-- f1_2026_testing_1&2_combined_laps.csv
     `-- f1_2026_testing_1&2_cleaned_laps.csv
 ```
 
