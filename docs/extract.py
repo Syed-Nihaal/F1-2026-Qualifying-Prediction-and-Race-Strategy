@@ -82,6 +82,13 @@ ROUND_ARTIFACTS: tuple[RoundArtifacts, ...] = (
         / "f1_2026_british_gp_plots",
         output_slug="r9_british_gp_2026",
     ),
+    RoundArtifacts(
+        name="T1&2 Bahrain 2026",
+        source_plot_dir=PROJECT_DIR
+        / "Testing_1&2_Bahrain_2026"
+        / "f1_2026_testing_1&2_plots",
+        output_slug="t1_2_bahrain_2026",
+    ),
 )
 
 # Copy files with the given suffixes from source_dir into destination_dir
