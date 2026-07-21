@@ -70,7 +70,7 @@ Each round notebook builds a data pipeline from FastF1 session data, cleans lap-
 | Audi | Ferrari (As Kick Sauber) | Audi |
 | Aston Martin | Mercedes AMG Powertrains | Aston Martin-Honda |
 | Alpine | Renault | Mercedes AMG Powertrains |
-| Cadillac | | Ferrari |
+| Cadillac | N/A | Ferrari |
 
 ## Workflow
 
@@ -95,6 +95,8 @@ The same workflow pattern is used in each round folder:
 |   |   `-- index.json
 |-- Round_1_Australian_GP_2026/
 |   |-- F1_2026_Australian_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_australian_gp_cleaned_laps.csv
+|   |-- f1_2026_australian_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_australian_gp_cache/
 |   |   `-- 2026/
 |   |-- f1_2026_australian_gp_plots/
@@ -102,10 +104,10 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_australian_gp_combined_laps.csv
 |   |   |-- f1_2026_australian_gp_qualifying_laps.csv
 |   |   `-- f1_2025_australian_gp_qualifying_laps.csv
-|   |-- f1_2026_australian_gp_cleaned_laps.csv
-|   |-- f1_2026_australian_gp_qualifying_cleaned_laps.csv
 |-- Round_2_Chinese_GP_2026/
 |   |-- F1_2026_Chinese_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_chinese_gp_cleaned_laps.csv
+|   |-- f1_2026_chinese_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_chinese_gp_cache/
 |   |   `-- 2026/
 |   |-- f1_2026_chinese_gp_plots/
@@ -113,10 +115,10 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_chinese_gp_combined_laps.csv
 |   |   |-- f1_2026_chinese_gp_qualifying_laps.csv
 |   |   `-- f1_2025_chinese_gp_qualifying_laps.csv
-|   |-- f1_2026_chinese_gp_cleaned_laps.csv
-|   |-- f1_2026_chinese_gp_qualifying_cleaned_laps.csv
 |-- Round_3_Japanese_GP_2026/
 |   |-- F1_2026_Japanese_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_japanese_gp_cleaned_laps.csv
+|   |-- f1_2026_japanese_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_japanese_gp_cache/
 |   |   `-- 2026/
 |   |-- f1_2026_japanese_gp_plots/
@@ -124,10 +126,10 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_japanese_gp_combined_laps.csv
 |   |   |-- f1_2026_japanese_gp_qualifying_laps.csv
 |   |   `-- f1_2025_japanese_gp_qualifying_laps.csv
-|   |-- f1_2026_japanese_gp_cleaned_laps.csv
-|   |-- f1_2026_japanese_gp_qualifying_cleaned_laps.csv
 |-- Round_4_Miami_GP_2026/
 |   |-- F1_2026_Miami_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_miami_gp_cleaned_laps.csv
+|   |-- f1_2026_miami_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_miami_gp_cache/
 |   |   `-- 2026/
 |   |-- f1_2026_miami_gp_plots/
@@ -135,10 +137,10 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_miami_gp_combined_laps.csv
 |   |   |-- f1_2026_miami_gp_qualifying_laps.csv
 |   |   `-- f1_2025_miami_gp_qualifying_laps.csv
-|   |-- f1_2026_miami_gp_cleaned_laps.csv
-|   |-- f1_2026_miami_gp_qualifying_cleaned_laps.csv
 |-- Round_5_Canadian_GP_2026/
 |   |-- F1_2026_Canadian_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_canadian_gp_cleaned_laps.csv
+|   |-- f1_2026_canadian_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_canadian_gp_cache/
 |   |   `-- 2026/
 |   |-- f1_2026_canadian_gp_plots/
@@ -146,10 +148,10 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_canadian_gp_combined_laps.csv
 |   |   |-- f1_2026_canadian_gp_qualifying_laps.csv
 |   |   `-- f1_2025_canadian_gp_qualifying_laps.csv
-|   |-- f1_2026_canadian_gp_cleaned_laps.csv
-|   |-- f1_2026_canadian_gp_qualifying_cleaned_laps.csv
 |-- Round_6_Monaco_GP_2026/
 |   |-- F1_2026_Monaco_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_monaco_gp_cleaned_laps.csv
+|   |-- f1_2026_monaco_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_monaco_gp_cache/
 |   |   `-- 2026/
 |   |-- f1_2026_monaco_gp_plots/
@@ -157,10 +159,10 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_monaco_gp_combined_laps.csv
 |   |   |-- f1_2026_monaco_gp_qualifying_laps.csv
 |   |   `-- f1_2025_monaco_gp_qualifying_laps.csv
-|   |-- f1_2026_monaco_gp_cleaned_laps.csv
-|   |-- f1_2026_monaco_gp_qualifying_cleaned_laps.csv
 |-- Round_7_Barcelona_Catalunya_GP_2026/
 |   |-- F1_2026_Barcelona_Catalunya_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_barcelona_catalunya_gp_cleaned_laps.csv
+|   |-- f1_2026_barcelona_catalunya_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_barcelona_catalunya_gp_cache/
 |   |   `-- 2026/
 |   |-- f1_2026_barcelona_catalunya_gp_plots/
@@ -168,10 +170,10 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_barcelona_catalunya_gp_combined_laps.csv
 |   |   |-- f1_2026_barcelona_catalunya_gp_qualifying_laps.csv
 |   |   `-- f1_2025_barcelona_catalunya_gp_qualifying_laps.csv
-|   |-- f1_2026_barcelona_catalunya_gp_cleaned_laps.csv
-|   |-- f1_2026_barcelona_catalunya_gp_qualifying_cleaned_laps.csv
 |-- Round_8_Austrian_GP_2026/
 |   |-- F1_2026_Austrian_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_austrian_gp_cleaned_laps.csv
+|   |-- f1_2026_austrian_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_austrian_gp_cache/
 |   |   `-- 2026/
 |   |-- f1_2026_austrian_gp_plots/
@@ -179,10 +181,10 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_austrian_gp_combined_laps.csv
 |   |   |-- f1_2026_austrian_gp_qualifying_laps.csv
 |   |   `-- f1_2025_austrian_gp_qualifying_laps.csv
-|   |-- f1_2026_austrian_gp_cleaned_laps.csv
-|   |-- f1_2026_austrian_gp_qualifying_cleaned_laps.csv
 |-- Round_9_British_GP_2026/
 |   |-- F1_2026_British_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_british_gp_cleaned_laps.csv
+|   |-- f1_2026_british_gp_qualifying_cleaned_laps.csv
 |   |-- f1_2026_british_gp_cache/
 |   |   `-- 2026/
 |   |-- f1_2026_british_gp_plots/
@@ -190,16 +192,25 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_british_gp_combined_laps.csv
 |   |   |-- f1_2026_british_gp_qualifying_laps.csv
 |   |   `-- f1_2025_british_gp_qualifying_laps.csv
-|   |-- f1_2026_british_gp_cleaned_laps.csv
-|   |-- f1_2026_british_gp_qualifying_cleaned_laps.csv
+|-- Round_10_Belgian_GP_2026/
+|   |-- F1_2026_Belgian_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_belgian_gp_cleaned_laps.csv
+|   |-- f1_2026_belgian_gp_qualifying_cleaned_laps.csv
+|   |-- f1_2026_belgian_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_belgian_gp_plots/
+|   |-- f1_2026_belgian_gp_pre_clean_data/
+|   |   |-- f1_2026_belgian_gp_combined_laps.csv
+|   |   |-- f1_2026_belgian_gp_qualifying_laps.csv
+|   |   `-- f1_2025_belgian_gp_qualifying_laps.csv
 `-- Testing_1&2_Bahrain_2026/
     |-- F1_2026_Testing_1&2_Bahrain__Baseline_Benchmarking.ipynb
+    |-- f1_2026_testing_1&2_cleaned_laps.csv
     |-- f1_2026_testing_1&2_cache/
     |   `-- 2026/
     |-- f1_2026_testing_1&2_plots/
     |-- f1_2026_testing_1&2_pre_clean_data/
-    |   `-- f1_2026_testing_1&2_combined_laps.csv
-    `-- f1_2026_testing_1&2_cleaned_laps.csv
+       `-- f1_2026_testing_1&2_combined_laps.csv 
 ```
 
 ## Requirements
@@ -247,6 +258,28 @@ Notes:
 - Delete a round cache folder if you want a fresh pull of FastF1 data.
 - Ensure cache directories exist before enabling cache in code.
 
+## Weather Feature Integration
+
+Before cleaning, a reusable `extract_weather_features(session, laps_df)` function merges session weather telemetry onto the lap-level dataframe.
+
+Main steps:
+
+1. Weather extraction
+    - Pulls `TrackTemp`, `AirTemp`, and `Humidity` from the session's `weather_data` table.
+    - If weather data is missing or empty, the three columns are set to `NaN` rather than dropped, keeping a stable schema.
+
+2. Time alignment
+    - Normalises the weather timestamp to a `Time` column expressed as a timedelta from session start.
+    - Converts each lap's `LapStartTime` to the same timedelta format.
+
+3. Nearest-time join
+    - Uses `pd.merge_asof` with `direction='nearest'` to attach the closest weather reading to each lap's start time.
+    - Falls back to `NaN` thermal columns if `LapStartTime` is unavailable or the join fails, with a warning printed to the console.
+
+Result:
+
+- Every lap in practice and qualifying data carries `TrackTemp`, `AirTemp`, and `Humidity` fields, which feed into the correlation/EDA plots and are offered as optional numeric predictors to the tyre degradation model (see below).
+
 ## Cleaning Process
 
 Data cleaning is implemented through a reusable `data_cleaning(data, output_csv_path)` function and is applied to both practice and qualifying lap datasets.
@@ -265,16 +298,21 @@ Main steps:
     - If the `IsAccurate` column exists, rows flagged as false (`false/0/no`) are removed.
     - This filters laps with unreliable timing quality.
 
-4. Column pruning
+4. 2025-to-2026 grid alignment
+    - Drops the `DRS` column where present, as it is 2025-specific telemetry not carried into the 2026 season's active-aerodynamics regulations.
+    - Removes laps from drivers no longer on the 2026 grid (e.g., Tsunoda, Doohan) when historical qualifying data is reused.
+    - Renames legacy team names to their 2026 equivalents (e.g., `Kick Sauber` → `Audi`) so historical and current-season rows share a consistent team label.
+
+5. Column pruning
     - Drops high-granularity timing metadata not required for downstream analysis/modeling, such as pit-in/out timestamps, session-time sector columns, deleted-lap metadata, and FastF1-generated flags.
 
-5. Export of cleaned outputs
+6. Export of cleaned outputs
     - Saves cleaned practice data to `f1_2026_[round]_cleaned_laps.csv`.
     - Saves cleaned qualifying data to `f1_2026_[round]_qualifying_cleaned_laps.csv`.
 
 Result:
 
-- The cleaned tables keep lap-level predictors used in EDA and modeling (`Session`, `Team`, `Driver`, `LapNumber`, `Stint`, `Compound`, `TyreLife`, speed features, and `LapTime`) while removing noisy or non-model inputs.
+- The cleaned tables keep lap-level predictors used in EDA and modeling (`Session`, `Team`, `Driver`, `LapNumber`, `Stint`, `Compound`, `TyreLife`, speed features, weather features, and `LapTime`) while removing noisy or non-model inputs.
 
 ## Qualifying Modeling Process
 
@@ -369,7 +407,7 @@ Key differences vs qualifying pipeline:
     - Uses `GroupShuffleSplit` grouped by `Driver` to reduce driver leakage between train and test.
 
 3. Feature set
-    - Numeric core: `LapNumber`, `TyreLife`, `Stint` plus optional speed/telemetry columns when available.
+    - Numeric core: `LapNumber`, `TyreLife`, `Stint` plus optional speed/telemetry columns (`SpeedST`, `SpeedI1`, `SpeedI2`, `SpeedFL`, `Throttle`, `Brake`) and weather columns (`TrackTemp`, `AirTemp`, `Humidity`) when available and numeric.
     - Categorical: `Compound`, `Driver`, `Team`, `Session`, `TrackStatus`, and `FreshTyre` when present.
 
 4. Model suite
@@ -390,7 +428,7 @@ Race strategy logic in the notebook converts degradation-model predictions into 
 Core assumptions and constants:
 
 1. Race length and pit loss
-    - `RACE_LAPS = XX`
+    - `RACE_LAPS` is set per round (e.g., 58 for the Australian GP) to match the official race distance.
     - `PIT_STOP_LOSS = 22.0` seconds per stop
     - Warm-up phase handled via `WARM_UP_LAPS = 3`
 
