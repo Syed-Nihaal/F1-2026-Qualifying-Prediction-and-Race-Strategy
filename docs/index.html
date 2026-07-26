@@ -103,14 +103,14 @@
       return round.plots.find((plotPath) => keyFromPath(plotPath).includes(DEFAULT_KEY)) || round.plots[0] || null;
     }
 
-    function renderPlot(plotPath) {
+    function renderPlot(plotFilePath) {
       const round = state.roundIndex.get(state.selectedRoundSlug);
-      if (!round || !plotPath) {
+      if (!round || !plotFilePath) {
         return;
       }
 
-      const webPath = webPathFromManifestPath(plotPath);
-      const title = prettyName(plotPath);
+      const webPath = webPathFromManifestPath(plotFilePath);
+      const title = prettyName(plotFilePath);
 
       plotImage.src = webPath;
       plotImage.alt = title;

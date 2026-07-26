@@ -176,6 +176,46 @@
       ]
     },
     {
+      "name": "R10 Belgian GP 2026",
+      "slug": "r10_belgian_gp_2026",
+      "plots": [
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_compound_performance.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_lap_time_distribution.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_lap_time_progression_by_session.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_laps_per_driver_compound.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_laptime_by_tracktemp_compound.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_qualifying_model_comparison.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_qualifying_sensitivity.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_race_strategy.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_speed_colored_track_map.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_speed_trap_trends.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_stint_pace_trends.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_thermal_degradation_eda.png",
+        "data/r10_belgian_gp_2026/plots/f1_2026_belgian_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
+      "name": "R11 Hungarian GP 2026",
+      "slug": "r11_hungarian_gp_2026",
+      "plots": [
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_compound_performance.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_lap_time_distribution.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_lap_time_progression_by_session.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_laps_per_driver_compound.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_laptime_by_tracktemp_compound.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_qualifying_model_comparison.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_qualifying_sensitivity.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_race_strategy.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_speed_colored_track_map.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_speed_trap_trends.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_stint_pace_trends.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_thermal_degradation_eda.png",
+        "data/r11_hungarian_gp_2026/plots/f1_2026_hungarian_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
       "name": "T1&2 Bahrain 2026",
       "slug": "t1_2_bahrain_2026",
       "plots": [
