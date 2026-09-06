@@ -216,6 +216,46 @@
       ]
     },
     {
+      "name": "R12 Dutch GP 2026",
+      "slug": "r12_dutch_gp_2026",
+      "plots": [
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_compound_performance.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_lap_time_distribution.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_lap_time_progression_by_session.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_laps_per_driver_compound.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_laptime_by_tracktemp_compound.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_qualifying_model_comparison.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_qualifying_sensitivity.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_race_strategy.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_speed_colored_track_map.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_speed_trap_trends.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_stint_pace_trends.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_thermal_degradation_eda.png",
+        "data/r12_dutch_gp_2026/plots/f1_2026_dutch_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
+      "name": "R13 Italian GP 2026",
+      "slug": "r13_italian_gp_2026",
+      "plots": [
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_compound_performance.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_lap_time_distribution.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_lap_time_progression_by_session.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_laps_per_driver_compound.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_laptime_by_tracktemp_compound.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_qualifying_model_comparison.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_qualifying_sensitivity.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_race_strategy.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_speed_colored_track_map.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_speed_trap_trends.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_stint_pace_trends.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_thermal_degradation_eda.png",
+        "data/r13_italian_gp_2026/plots/f1_2026_italian_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
       "name": "T1&2 Bahrain 2026",
       "slug": "t1_2_bahrain_2026",
       "plots": [
