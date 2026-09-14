@@ -5,34 +5,35 @@ Each round notebook builds a data pipeline from FastF1 session data, cleans lap-
 
 ## Schedule
 
-| Round | Event | Dates | Notes |
-| --- | --- | --- | --- |
-| Testing 1 | Bahrain 2026 | 11 - 13 FEB | Pre-season |
-| Testing 2 | Bahrain 2026 | 18 - 20 FEB | Pre-season |
-| Round 1 | Australian GP 2026 | 06 - 09 MAR | None |
-| Round 2 | Chinese GP 2026 | 13 - 15 MAR | Sprint Weekend |
-| Round 3 | Japanese GP 2026 | 27 - 29 MAR | None |
-| ~~Round 4~~ | ~~Bahrain GP 2026~~ | ~~10 - 12 APR~~ | Cancelled |
-| ~~Round 5~~ | ~~Saudi Arabian GP 2026~~ | ~~17 - 19 APR~~ | Cancelled |
-| Round 4 | Miami GP 2026 | 01 - 03 MAY | Sprint Weekend |
-| Round 5 | Canadian GP 2026 | 22 - 24 MAY | Sprint Weekend |
-| Round 6 | Monaco GP 2026 | 05 - 07 JUN | None |
-| Round 7 | Barcelona-Catalunya GP 2026 | 12 - 14 JUN | None |
-| Round 8 | Austrian GP 2026 | 26 - 28 JUN | None |
-| Round 9 | British GP 2026 | 03 - 05 JUL | Sprint Weekend |
-| Round 10 | Belgian GP 2026 | 17 - 19 JUL | None |
-| Round 11 | Hungarian GP 2026 | 24 - 26 JUL | None |
-| Round 12 | Dutch GP 2026 | 21 - 23 AUG | Sprint Weekend |
-| Round 13 | Italian GP 2026 | 04 - 06 SEP | None |
-| Round 14 | Spanish GP 2026 | 11 - 13 SEP | None |
-| Round 15 | Azerbaijan GP 2026 | 24 - 26 SEP | None |
-| Round 16 | Singapore GP 2026 | 09 - 11 OCT | Sprint Weekend |
-| Round 17 | United States GP 2026 | 23 - 25 OCT | None |
-| Round 18 | Mexico City GP 2026 | 30 - 01 NOV | None |
-| Round 19 | Sao Paulo GP 2026 | 06 - 08 NOV | None |
-| Round 20 | Las Vegas GP 2026 | 19 - 21 NOV | None |
-| Round 21 | Qatar GP 2026 | 27 - 29 NOV | None |
-| Round 22 | Abu Dhabi GP 2026 | 04 - 06 DEC | None |
+| Round | Event | Dates | Notes | Done |
+| --- | --- | --- | --- | --- |
+| Testing 1 | Bahrain 2026 | 11 - 13 FEB | Pre-season | &check; |
+| Testing 2 | Bahrain 2026 | 18 - 20 FEB | Pre-season | &check; |
+| Round 1 | Australian GP 2026 | 06 - 09 MAR | None | &check; |
+| Round 2 | Chinese GP 2026 | 13 - 15 MAR | Sprint Weekend | &check; |
+| Round 3 | Japanese GP 2026 | 27 - 29 MAR | None | &check; |
+| ~~Round 4~~ | ~~Bahrain GP 2026~~ | ~~10 - 12 APR~~ | Postponed to Bahrain GP in Malaysia 2026 | &times; |
+| ~~Round 5~~ | ~~Saudi Arabian GP 2026~~ | ~~17 - 19 APR~~ | Cancelled | &times; |
+| Round 4 | Miami GP 2026 | 01 - 03 MAY | Sprint Weekend | &check; |
+| Round 5 | Canadian GP 2026 | 22 - 24 MAY | Sprint Weekend | &check; |
+| Round 6 | Monaco GP 2026 | 05 - 07 JUN | None | &check; |
+| Round 7 | Barcelona-Catalunya GP 2026 | 12 - 14 JUN | None | &check; |
+| Round 8 | Austrian GP 2026 | 26 - 28 JUN | None | &check; |
+| Round 9 | British GP 2026 | 03 - 05 JUL | Sprint Weekend | &check; |
+| Round 10 | Belgian GP 2026 | 17 - 19 JUL | None | &check; |
+| Round 11 | Hungarian GP 2026 | 24 - 26 JUL | None | &check; |
+| Round 12 | Dutch GP 2026 | 21 - 23 AUG | Sprint Weekend | &check; |
+| Round 13 | Italian GP 2026 | 04 - 06 SEP | None | &check; |
+| Round 14 | Spanish GP 2026 | 11 - 13 SEP | None | &check; |
+| Round 15 | Azerbaijan GP 2026 | 24 - 26 SEP | None | |
+| Round 16 | Bahrain GP in Malaysia 2026 | 02 - 04 OCT | None | |
+| Round 17 | Singapore GP 2026 | 09 - 11 OCT | Sprint Weekend | |
+| Round 18 | United States GP 2026 | 23 - 25 OCT | None | |
+| Round 19 | Mexico City GP 2026 | 30 - 01 NOV | None | |
+| Round 20 | Sao Paulo GP 2026 | 06 - 08 NOV | None | |
+| Round 21 | Las Vegas GP 2026 | 19 - 21 NOV | None | |
+| Round 22 | Qatar GP 2026 | 27 - 29 NOV | None | |
+| Round 23 | Abu Dhabi GP 2026 | 04 - 06 DEC | None | |
 
 ## Changes from 2025 Season
 
@@ -53,13 +54,15 @@ Each round notebook builds a data pipeline from FastF1 session data, cleans lap-
 
 ### Team & Driver Lineup Changes
 
-| Team | Driver | Notes |
-| --- | --- | --- |
-| Red Bull Racing | Isack Hadjar | Promoted from Racing Bulls replacing Yuki Tsunoda. |
-| Red Bull Racing | Yuki Tsunoda | Demoted to reserve test driver. |
-| Racing Bulls | Arvid Lindblad | Replacing Isack Hadjar. |
-| Audi | Nico Hulkenberg & Gabriel Bortoleto | Rebranded from Kick Sauber. |
-| Cadillac | Sergio Perez & Valtteri Bottas | New entry with returning drivers. |
+| Team | Driver | Notes | Duration |
+| --- | --- | --- | --- |
+| Red Bull Racing | Isack Hadjar | Promoted from Racing Bulls replacing Yuki Tsunoda. | Season |
+| Red Bull Racing | Yuki Tsunoda | Demoted to reserve test driver. | Season |
+| Racing Bulls | Arvid Lindblad | Replacing Isack Hadjar. | Season |
+| Audi | Nico Hulkenberg & Gabriel Bortoleto | Rebranded from Kick Sauber. | Season |
+| Cadillac | Sergio Perez & Valtteri Bottas | New entry with returning drivers. | Season |
+| Red Bull Racing | Liam Lawson | Temporarly promoted from Racing Bulls replacing Isack Hadjar due to injury. | Dutch GP 2026 - Present |
+| Racing Bulls | Yuki Tsunoda | Temporarly promoted from reserve test driver replacing Liam Lawson. | Dutch GP 2026 - Present |
 
 ### Engine Supplier Changes
 
