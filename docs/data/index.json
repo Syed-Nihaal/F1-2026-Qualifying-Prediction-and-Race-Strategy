@@ -256,6 +256,46 @@
       ]
     },
     {
+      "name": "R14 Spanish GP 2026",
+      "slug": "r14_spanish_gp_2026",
+      "plots": [
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_compound_performance.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_lap_time_distribution.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_lap_time_progression_by_session.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_laps_per_driver_compound.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_laptime_by_tracktemp_compound.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_qualifying_model_comparison.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_qualifying_sensitivity.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_race_strategy.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_speed_colored_track_map.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_speed_trap_trends.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_stint_pace_trends.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_thermal_degradation_eda.png",
+        "data/r14_spanish_gp_2026/plots/f1_2026_spanish_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
+      "name": "R15 Azerbaijan GP 2026",
+      "slug": "r15_azerbaijan_gp_2026",
+      "plots": [
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_compound_performance.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_lap_time_distribution.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_lap_time_progression_by_session.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_laps_per_driver_compound.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_laptime_by_tracktemp_compound.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_qualifying_model_comparison.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_qualifying_sensitivity.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_race_strategy.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_speed_colored_track_map.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_speed_trap_trends.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_stint_pace_trends.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_thermal_degradation_eda.png",
+        "data/r15_azerbaijan_gp_2026/plots/f1_2026_azerbaijan_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
       "name": "T1&2 Bahrain 2026",
       "slug": "t1_2_bahrain_2026",
       "plots": [
