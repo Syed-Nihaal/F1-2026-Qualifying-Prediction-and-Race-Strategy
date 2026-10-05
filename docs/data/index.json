@@ -296,6 +296,26 @@
       ]
     },
     {
+      "name": "R16 Bahrain GP in Malaysia 2026",
+      "slug": "r16_bahrain_malaysia_gp_2026",
+      "plots": [
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_compound_performance.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_fastest_telemetry_speed_vs_distance.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_lap_time_distribution.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_lap_time_progression_by_session.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_laps_per_driver_compound.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_laptime_by_tracktemp_compound.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_qualifying_model_comparison.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_qualifying_sensitivity.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_race_strategy.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_speed_colored_track_map.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_speed_trap_trends.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_stint_pace_trends.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_thermal_degradation_eda.png",
+        "data/r16_bahrain_malaysia_gp_2026/plots/f1_2026_bahrain_malaysia_gp_tyre_degradation_model_comparison.png"
+      ]
+    },
+    {
       "name": "T1&2 Bahrain 2026",
       "slug": "t1_2_bahrain_2026",
       "plots": [
