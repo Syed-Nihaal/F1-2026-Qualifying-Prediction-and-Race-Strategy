@@ -127,9 +127,9 @@ ROUND_ARTIFACTS: tuple[RoundArtifacts, ...] = (
     RoundArtifacts(
         name="R16 Bahrain GP in Malaysia 2026",
         source_plot_dir=PROJECT_DIR
-        / "Round_16_Bahrain_Malaysia_GP_2026"
-        / "f1_2026_bahrain_malaysia_gp_plots",
-        output_slug="r16_bahrain_malaysia_gp_2026",
+        / "Round_16_Bahrain_GP_Malaysia_2026"
+        / "f1_2026_bahrain_gp_malaysia_plots",
+        output_slug="r16_bahrain_gp_malaysia_2026",
     ),
     RoundArtifacts(
         name="T1&2 Bahrain 2026",
@@ -167,7 +167,7 @@ def build_manifest() -> list[dict[str, object]]:
             copied_plots = copy_directory_contents(
                 round_artifacts.source_plot_dir,
                 plot_output_dir,
-                {".png", ".jpg", ".jpeg", ".webp"}
+                {".svg", ".png", ".jpg", ".jpeg", ".webp"}
             )
 
         manifest.append(

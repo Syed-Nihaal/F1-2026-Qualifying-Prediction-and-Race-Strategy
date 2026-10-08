@@ -26,7 +26,7 @@ Each round notebook builds a data pipeline from FastF1 session data, cleans lap-
 | Round 13 | Italian GP 2026 | 04 - 06 SEP | None | &check; |
 | Round 14 | Spanish GP 2026 | 11 - 13 SEP | None | &check; |
 | Round 15 | Azerbaijan GP 2026 | 24 - 26 SEP | None | &check; |
-| Round 16 | Bahrain GP in Malaysia 2026 | 02 - 04 OCT | None | |
+| Round 16 | Bahrain GP in Malaysia 2026 | 02 - 04 OCT | None | &check; |
 | Round 17 | Singapore GP 2026 | 09 - 11 OCT | Sprint Weekend | |
 | Round 18 | United States GP 2026 | 23 - 25 OCT | None | |
 | Round 19 | Mexico City GP 2026 | 30 - 01 NOV | None | |
@@ -260,6 +260,17 @@ The same workflow pattern is used in each round folder:
 |   |   |-- f1_2026_azerbaijan_gp_combined_laps.csv
 |   |   |-- f1_2026_azerbaijan_gp_qualifying_laps.csv
 |   |   `-- f1_2025_azerbaijan_gp_qualifying_laps.csv
+|-- Round_16_Bahrain_Malaysia_GP_2026/
+|   |-- F1_2026_Bahrain_Malaysia_GP_Qualifying_and_Race_Strategy.ipynb
+|   |-- f1_2026_bahrain_malaysia_gp_cleaned_laps.csv
+|   |-- f1_2026_bahrain_malaysia_gp_qualifying_cleaned_laps.csv
+|   |-- f1_2026_bahrain_malaysia_gp_cache/
+|   |   `-- 2026/
+|   |-- f1_2026_bahrain_malaysia_gp_plots/
+|   |-- f1_2026_bahrain_malaysia_gp_pre_clean_data/
+|   |   |-- f1_2026_bahrain_malaysia_gp_combined_laps.csv
+|   |   |-- f1_2026_bahrain_malaysia_gp_qualifying_laps.csv
+|   |   `-- f1_2025_bahrain_malaysia_gp_qualifying_laps.csv
 `-- Testing_1&2_Bahrain_2026/
     |-- F1_2026_Testing_1&2_Bahrain__Baseline_Benchmarking.ipynb
     |-- f1_2026_testing_1&2_cleaned_laps.csv
@@ -522,6 +533,12 @@ Interpretation note:
 - Use `import fastf1 as ff1` consistently.
 - All notebooks are named `F1_2026_[Round]_Qualifying_and_Race_Strategy.ipynb`.
 - All csv files are named `f1_2026_[Round]_[Session]_[Dataset].csv`.
+
+## Sources
+
+- [FastF1](https://github.com/SaschW/fastf1)
+- [F1 Icon](https://www.cleanpng.com/png-f1-formula-1-racing-logo-red-myg98w/)
+- [Dashboard Template](https://coreui.io/demos/bootstrap/latest/modern/?theme=dark)
 
 ## Disclaimer
 

@@ -1,7 +1,7 @@
 Driver,DriverNumber,LapTime,LapNumber,Stint,Sector1Time,Sector2Time,Sector3Time,SpeedI1,SpeedI2,SpeedFL,SpeedST,IsPersonalBest,Compound,TyreLife,FreshTyre,Team,LapStartTime,TrackStatus,Session
 NOR,4,76.003,2.0,1.0,26.383,17.285,32.335,290.0,322.0,307.0,324.0,True,SOFT,2.0,True,McLaren,0 days 00:16:54.443000,1,Q
 NOR,4,75.912,5.0,2.0,26.463,17.116,32.333,290.0,326.0,308.0,328.0,True,SOFT,5.0,False,McLaren,0 days 00:22:09.056000,1,Q
-NOR,4,75.556,10.0,4.0,26.104,17.122,32.33,289.0,325.0,307.0,323.0,True,,2.0,True,McLaren,0 days 00:40:52.920000,1,Q
+NOR,4,75.556,10.0,4.0,26.104,17.122,32.33,289.0,325.0,307.0,323.0,True,None,2.0,True,McLaren,0 days 00:40:52.920000,1,Q
 NOR,4,75.415,13.0,5.0,26.194,17.03,32.191,289.0,325.0,310.0,328.0,True,SOFT,5.0,False,McLaren,0 days 00:52:08.055000,1,Q
 NOR,4,75.921,16.0,6.0,26.127,17.057,32.737,289.0,325.0,313.0,326.0,True,SOFT,2.0,True,McLaren,0 days 01:02:26.986000,1,Q
 NOR,4,75.096,19.0,7.0,25.961,16.997,32.138,288.0,325.0,310.0,326.0,True,SOFT,2.0,True,McLaren,0 days 01:10:28.640000,1,Q

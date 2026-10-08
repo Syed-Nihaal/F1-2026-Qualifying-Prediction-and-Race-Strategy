@@ -1,63 +1,240 @@
 <!doctype html>
-<html>
+<html lang="en" data-coreui-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <title>F1 2026 Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>F1 2026 — Qualifying Prediction & Race Strategy Dashboard</title>
+  
+  <!-- Website Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/F1.png">
+  
+  <!-- CoreUI 5 & Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.2.0/dist/css/coreui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Dashboard Styling -->
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <div class="shell">
-    <section class="hero">
-      <div>
-        <h1>F1 2026 — Qualifying & Race Strategy</h1>
-      </div>
+  <!-- Mobile Sidebar Overlay Backdrop -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
-      <div class="controls">
-        <div class="control">
-          <label for="roundSelect">Round name</label>
-          <select id="roundSelect"></select>
+  <div class="app-container">
+    <!-- 1. LEFT FIXED SIDEBAR -->
+    <aside class="app-sidebar" id="sidebar">
+      <!-- Sidebar Header with F1 Logo -->
+      <div class="app-sidebar-header">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/img/F1.png" alt="F1 Logo" class="brand-logo">
+          <span class="brand-title">F1 2026</span>
+          <span class="brand-tag">SIM</span>
         </div>
+        <button class="sidebar-toggle-btn d-lg-none" id="sidebarCloseBtn" aria-label="Close sidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
 
-        <div class="control">
-          <label for="plotSelect">Plot</label>
-          <select id="plotSelect"></select>
+      <!-- Grand Prix Round Selector -->
+      <div class="app-sidebar-controls">
+        <label for="roundSelect" class="sidebar-label">Grand Prix Round</label>
+        <select id="roundSelect" class="custom-select"></select>
+      </div>
+
+      <!-- Categorized Plot Navigation List -->
+      <ul class="app-sidebar-nav" id="sidebarPlotNav">
+        <!-- Injected dynamically via JavaScript in exact category sequence -->
+      </ul>
+
+      <!-- Sidebar Status Footer -->
+      <div class="app-sidebar-footer">
+        <div class="status-indicator">
+          <span><span class="status-dot"></span>FIA 2026 Regs Engine</span>
+          <span class="badge bg-success-subtle text-success">Active</span>
+        </div>
+        <div class="progress" role="progressbar" aria-label="Sim Engine Status" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar bg-danger"></div>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <section class="viewport">
-      <div class="status" id="status">
-        <div>Loading dashboard...</div>
-        <span id="selectionMeta"></span>
-      </div>
+    <!-- 2. MAIN APP WRAPPER -->
+    <div class="app-wrapper">
+      <!-- Sticky Top Header -->
+      <header class="app-header">
+        <div class="header-container">
+          <div class="d-flex align-items-center gap-3">
+            <button class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Toggle navigation">
+              <i class="bi bi-list"></i>
+            </button>
 
-      <div class="frame">
-        <img id="plotImage" alt="Selected plot" />
-      </div>
+            <!-- Breadcrumbs -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb-trail">
+                <li class="breadcrumb-crumb"><i class="bi bi-speedometer2"></i>Season 2026</li>
+                <li class="breadcrumb-divider"><i class="bi bi-chevron-right"></i></li>
+                <li class="breadcrumb-crumb" id="bcRound">Round</li>
+                <li class="breadcrumb-divider"><i class="bi bi-chevron-right"></i></li>
+                <li class="breadcrumb-crumb breadcrumb-active" id="bcPlot">Plot</li>
+              </ol>
+            </nav>
+          </div>
 
-      <div class="caption">
-        <strong id="plotTitle"></strong>
-        <div class="path" id="plotPath"></div>
-      </div>
-    </section>
+          <!-- Quick Actions Toolbar -->
+          <div class="header-actions">
+            <button id="prevPlotBtn" class="btn-icon" title="Previous plot (Left arrow)">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button id="nextPlotBtn" class="btn-icon" title="Next plot (Right arrow)">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+            <button id="fullscreenBtn" class="btn-icon" title="Expand view">
+              <i class="bi bi-arrows-fullscreen"></i>
+            </button>
+            <a id="downloadPlotBtn" class="btn-f1" download title="Download PNG">
+              <i class="bi bi-download"></i> Export
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Dashboard Canvas -->
+      <main class="app-content">
+        <!-- Top 4 KPI Metrics Row -->
+        <section class="kpi-grid">
+          <div class="kpi-card accent-red">
+            <div class="kpi-header">
+              <span class="kpi-title">Active Circuit</span>
+              <i class="bi bi-geo-alt-fill kpi-icon text-danger"></i>
+            </div>
+            <div class="kpi-value" id="kpiRoundName">Loading...</div>
+            <div class="kpi-subtext text-danger">
+              <i class="bi bi-flag"></i> Grand Prix Round
+            </div>
+          </div>
+
+          <div class="kpi-card accent-blue">
+            <div class="kpi-header">
+              <span class="kpi-title">Analysis Topic</span>
+              <i class="bi bi-graph-up kpi-icon text-info"></i>
+            </div>
+            <div class="kpi-value" id="kpiPlotName">-</div>
+            <div class="kpi-subtext text-info">
+              <i class="bi bi-eye"></i> Selected Telemetry View
+            </div>
+          </div>
+
+          <div class="kpi-card accent-green">
+            <div class="kpi-header">
+              <span class="kpi-title">Round Analytics</span>
+              <i class="bi bi-bar-chart-steps kpi-icon text-success"></i>
+            </div>
+            <div class="kpi-value" id="kpiPlotCount">0 Plots</div>
+            <div class="kpi-subtext text-success">
+              <i class="bi bi-check2-circle"></i> Complete Simulation Run
+            </div>
+          </div>
+
+          <div class="kpi-card accent-amber">
+            <div class="kpi-header">
+              <span class="kpi-title">Vehicle Dynamics</span>
+              <i class="bi bi-cpu kpi-icon text-warning"></i>
+            </div>
+            <div class="kpi-value">2026 Regs</div>
+            <div class="kpi-subtext text-warning">
+              <i class="bi bi-lightning-charge"></i> 350kW MGU-K Hybrid Sim
+            </div>
+          </div>
+        </section>
+
+        <!-- Main Studio Visualization Card -->
+        <section class="studio-card">
+          <div class="studio-header">
+            <div class="studio-title-block">
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <h1 class="studio-title" id="plotTitle">Plot Title</h1>
+                <span class="category-badge" id="plotCategoryBadge">Qualifying & Pace</span>
+              </div>
+              <span class="studio-path" id="plotPath">data/path/plot.png</span>
+            </div>
+          </div>
+
+          <div class="plot-viewport">
+            <div class="plot-spinner" id="plotSpinner"></div>
+            <div class="plot-image-container">
+              <img id="plotImage" class="plot-image" alt="Selected F1 plot" title="Click to view full screen">
+            </div>
+          </div>
+
+          <div class="studio-footer">
+            <span id="selectionMeta">Loading metadata...</span>
+            <span class="d-none d-md-inline"><i class="bi bi-keyboard me-1"></i>Tip: Use Left / Right arrow keys to cycle plots per sidebar</span>
+          </div>
+        </section>
+      </main>
+
+      <!-- Dashboard Footer -->
+      <footer class="app-footer">
+        <div>F1 2026 Qualifying Prediction & Race Strategy Dashboard</div>
+        <div>Engineered with <span class="text-danger fw-semibold">CoreUI Modern Dark</span> architecture</div>
+      </footer>
+    </div>
   </div>
 
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close full screen view">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <img id="lightboxImg" class="lightbox-img" alt="Enlarged plot">
+    </div>
+  </div>
+
+  <!-- Client-Side Dashboard Script -->
   <script>
     const DEFAULT_KEY = 'qualifying_sensitivity';
+
+    const CATEGORIES = [
+      { id: 'qualifying', label: 'Qualifying & Pace', icon: 'bi-stopwatch-fill' },
+      { id: 'strategy', label: 'Race Strategy & Stints', icon: 'bi-bezier2' },
+      { id: 'telemetry', label: 'Telemetry & Track Maps', icon: 'bi-speedometer' },
+      { id: 'tyres', label: 'Tyre & Thermal Degradation', icon: 'bi-pie-chart-fill' },
+      { id: 'other', label: 'Other Analytics', icon: 'bi-graph-up' }
+    ];
 
     const state = {
       rounds: [],
       roundIndex: new Map(),
       selectedRoundSlug: null,
+      selectedPlotPath: null,
+      sidebarOrderedPlots: []
     };
 
+    // DOM References
     const roundSelect = document.getElementById('roundSelect');
-    const plotSelect = document.getElementById('plotSelect');
-    const status = document.getElementById('status');
-    const selectionMeta = document.getElementById('selectionMeta');
+    const sidebarPlotNav = document.getElementById('sidebarPlotNav');
     const plotImage = document.getElementById('plotImage');
     const plotTitle = document.getElementById('plotTitle');
+    const plotCategoryBadge = document.getElementById('plotCategoryBadge');
     const plotPath = document.getElementById('plotPath');
+    const plotSpinner = document.getElementById('plotSpinner');
+    const selectionMeta = document.getElementById('selectionMeta');
+    const bcRound = document.getElementById('bcRound');
+    const bcPlot = document.getElementById('bcPlot');
+    const kpiRoundName = document.getElementById('kpiRoundName');
+    const kpiPlotName = document.getElementById('kpiPlotName');
+    const kpiPlotCount = document.getElementById('kpiPlotCount');
+    const prevPlotBtn = document.getElementById('prevPlotBtn');
+    const nextPlotBtn = document.getElementById('nextPlotBtn');
+    const downloadPlotBtn = document.getElementById('downloadPlotBtn');
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+    const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
+    const sidebarBackdrop = document.getElementById('sidebarBackdrop');
 
     function prettyName(filePath) {
       const fileName = filePath.split('/').pop() || filePath;
@@ -65,8 +242,10 @@
         .replace(/^f1_2026_/i, '')
         .replace(/^f1_2024_/i, '')
         .replace(/\.png$/i, '')
+        .replace(/\.svg$/i, '')
         .replace(/_/g, ' ')
-        .replace(/\bgp\b/i, 'GP');
+        .replace(/\bgp\b/i, 'GP')
+        .replace(/\beda\b/i, 'EDA');
     }
 
     function webPathFromManifestPath(filePath) {
@@ -75,8 +254,44 @@
       return docsIndex >= 0 ? normalized.slice(docsIndex + '/docs/'.length) : normalized;
     }
 
-    function keyFromPath(filePath) {
-      return filePath.split('/').pop().toLowerCase();
+    function getPlotCategory(filePath) {
+      const lower = filePath.toLowerCase();
+      if (lower.includes('qualifying') || lower.includes('lap_time') || lower.includes('laptime')) {
+        return 'qualifying';
+      }
+      if (lower.includes('strategy') || lower.includes('stint') || lower.includes('laps_per_driver')) {
+        return 'strategy';
+      }
+      if (lower.includes('telemetry') || lower.includes('speed') || lower.includes('track_map')) {
+        return 'telemetry';
+      }
+      if (lower.includes('degradation') || lower.includes('compound') || lower.includes('thermal') || lower.includes('tyre')) {
+        return 'tyres';
+      }
+      return 'other';
+    }
+
+    function getSidebarOrderedPlots(round) {
+      const grouped = new Map();
+      CATEGORIES.forEach(cat => grouped.set(cat.id, []));
+
+      round.plots.forEach(plot => {
+        const catId = getPlotCategory(plot);
+        if (grouped.has(catId)) {
+          grouped.get(catId).push(plot);
+        } else {
+          grouped.get('other').push(plot);
+        }
+      });
+
+      const ordered = [];
+      CATEGORIES.forEach(cat => {
+        const list = grouped.get(cat.id);
+        if (list && list.length) {
+          ordered.push(...list);
+        }
+      });
+      return ordered;
     }
 
     function buildRoundOptions() {
@@ -89,81 +304,231 @@
       }
     }
 
-    function buildPlotOptions(round) {
-      plotSelect.innerHTML = '';
-      round.plots.forEach((plotPath) => {
-        const option = document.createElement('option');
-        option.value = plotPath;
-        option.textContent = prettyName(plotPath);
-        plotSelect.appendChild(option);
+    function buildSidebarNav(round) {
+      sidebarPlotNav.innerHTML = '';
+      
+      const grouped = new Map();
+      CATEGORIES.forEach(cat => grouped.set(cat.id, []));
+
+      round.plots.forEach(plot => {
+        const catId = getPlotCategory(plot);
+        if (grouped.has(catId)) {
+          grouped.get(catId).push(plot);
+        } else {
+          grouped.get('other').push(plot);
+        }
+      });
+
+      CATEGORIES.forEach(cat => {
+        const plotsInCat = grouped.get(cat.id);
+        if (!plotsInCat || plotsInCat.length === 0) return;
+
+        const catHeader = document.createElement('li');
+        catHeader.className = 'nav-category';
+        catHeader.innerHTML = `
+          <span>${cat.label}</span>
+          <span class="nav-category-badge">${plotsInCat.length}</span>
+        `;
+        sidebarPlotNav.appendChild(catHeader);
+
+        plotsInCat.forEach(plot => {
+          const li = document.createElement('li');
+          li.className = 'sidebar-nav-item';
+
+          const a = document.createElement('a');
+          a.className = 'sidebar-nav-link';
+          a.dataset.plotPath = plot;
+          a.innerHTML = `<i class="bi ${cat.icon}"></i> <span>${prettyName(plot)}</span>`;
+          
+          if (plot === state.selectedPlotPath) {
+            a.classList.add('active');
+          }
+
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            renderPlot(plot);
+            closeMobileSidebar();
+          });
+
+          li.appendChild(a);
+          sidebarPlotNav.appendChild(li);
+        });
       });
     }
 
-    function pickDefaultPlot(round) {
-      return round.plots.find((plotPath) => keyFromPath(plotPath).includes(DEFAULT_KEY)) || round.plots[0] || null;
+    function pickDefaultPlot(orderedPlots) {
+      return orderedPlots.find(plotPath => plotPath.toLowerCase().includes(DEFAULT_KEY)) || orderedPlots[0] || null;
     }
 
     function renderPlot(plotFilePath) {
       const round = state.roundIndex.get(state.selectedRoundSlug);
-      if (!round || !plotFilePath) {
-        return;
-      }
+      if (!round || !plotFilePath) return;
 
+      state.selectedPlotPath = plotFilePath;
       const webPath = webPathFromManifestPath(plotFilePath);
       const title = prettyName(plotFilePath);
 
-      plotImage.src = webPath;
-      plotImage.alt = title;
+      // Identify category
+      const catId = getPlotCategory(plotFilePath);
+      const catObj = CATEGORIES.find(c => c.id === catId) || CATEGORIES[4];
+      if (plotCategoryBadge) {
+        plotCategoryBadge.innerHTML = `<i class="bi ${catObj.icon}"></i> ${catObj.label}`;
+      }
+
+      // Loading state
+      plotSpinner.style.display = 'block';
+      plotImage.style.opacity = '0.3';
+
+      const img = new Image();
+      img.onload = () => {
+        plotImage.src = webPath;
+        plotImage.alt = title;
+        lightboxImg.src = webPath;
+        plotSpinner.style.display = 'none';
+        plotImage.style.opacity = '1';
+      };
+      img.onerror = () => {
+        plotSpinner.style.display = 'none';
+        plotImage.style.opacity = '1';
+      };
+      img.src = webPath;
+
+      // Update text & indicators
       plotTitle.textContent = title;
       plotPath.textContent = webPath;
-      selectionMeta.textContent = `${round.name} · ${round.plots.length} plots available`;
-      status.firstElementChild.textContent = `Showing ${round.name}`;
+      downloadPlotBtn.href = webPath;
+      downloadPlotBtn.download = plotFilePath.split('/').pop() || 'plot.png';
+
+      bcRound.textContent = round.name;
+      bcPlot.textContent = title;
+
+      kpiRoundName.textContent = round.name.replace(/^R\d+\s*/i, '');
+      kpiPlotName.textContent = title;
+      kpiPlotCount.textContent = `${round.plots.length} Plots`;
+
+      const currentIdx = state.sidebarOrderedPlots.indexOf(plotFilePath) + 1;
+      selectionMeta.textContent = `${round.name} · Plot ${currentIdx} of ${state.sidebarOrderedPlots.length}`;
+
+      // Update active state in sidebar
+      document.querySelectorAll('.sidebar-nav-link').forEach(link => {
+        const isActive = (link.dataset.plotPath === plotFilePath);
+        link.classList.toggle('active', isActive);
+        if (isActive) {
+          link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+      });
     }
 
     function selectRound(roundSlug, preferredPlotPath = null) {
       const round = state.roundIndex.get(roundSlug);
-      if (!round) {
-        return;
-      }
+      if (!round) return;
 
       state.selectedRoundSlug = roundSlug;
-      buildPlotOptions(round);
+      roundSelect.value = roundSlug;
 
-      const plotPath = preferredPlotPath && round.plots.includes(preferredPlotPath)
+      // Build ordered plot list exactly matching the sidebar
+      state.sidebarOrderedPlots = getSidebarOrderedPlots(round);
+
+      const plotPath = preferredPlotPath && state.sidebarOrderedPlots.includes(preferredPlotPath)
         ? preferredPlotPath
-        : pickDefaultPlot(round);
+        : pickDefaultPlot(state.sidebarOrderedPlots);
+
+      state.selectedPlotPath = plotPath;
+      buildSidebarNav(round);
 
       if (plotPath) {
-        plotSelect.value = plotPath;
         renderPlot(plotPath);
       }
     }
 
-    async function loadDashboard() {
-      const index = await fetch('data/index.json').then((response) => response.json());
-      state.rounds = index.rounds || [];
-      state.roundIndex = new Map(state.rounds.map((round) => [round.slug, round]));
+    function navigatePlot(offset) {
+      const ordered = state.sidebarOrderedPlots;
+      if (!ordered || !ordered.length) return;
 
-      buildRoundOptions();
+      const currentIndex = ordered.indexOf(state.selectedPlotPath);
+      let nextIndex = currentIndex + offset;
 
-      const firstRound = state.rounds[0];
-      if (!firstRound) {
-        status.firstElementChild.textContent = 'No rounds found';
-        selectionMeta.textContent = '';
-        return;
-      }
+      if (nextIndex < 0) nextIndex = ordered.length - 1;
+      if (nextIndex >= ordered.length) nextIndex = 0;
 
-      roundSelect.value = firstRound.slug;
-      selectRound(firstRound.slug);
-
-      roundSelect.addEventListener('change', () => selectRound(roundSelect.value));
-      plotSelect.addEventListener('change', () => renderPlot(plotSelect.value));
+      renderPlot(ordered[nextIndex]);
     }
 
-    loadDashboard().catch((error) => {
-      status.firstElementChild.textContent = 'Failed to load dashboard';
-      selectionMeta.textContent = '';
+    function openLightbox() {
+      if (state.selectedPlotPath) {
+        lightboxModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function toggleMobileSidebar() {
+      sidebar.classList.toggle('sidebar-open');
+      sidebarBackdrop.classList.toggle('active');
+    }
+
+    function closeMobileSidebar() {
+      sidebar.classList.remove('sidebar-open');
+      sidebarBackdrop.classList.remove('active');
+    }
+
+    async function loadDashboard() {
+      try {
+        const response = await fetch('data/index.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const index = await response.json();
+
+        state.rounds = index.rounds || [];
+        state.roundIndex = new Map(state.rounds.map(round => [round.slug, round]));
+
+        buildRoundOptions();
+
+        const firstRound = state.rounds[0];
+        if (!firstRound) {
+          kpiRoundName.textContent = 'No Rounds';
+          selectionMeta.textContent = 'No data available in manifest';
+          return;
+        }
+
+        selectRound(firstRound.slug);
+      } catch (err) {
+        console.error('Failed to load manifest:', err);
+        kpiRoundName.textContent = 'Load Error';
+        plotTitle.textContent = 'Unable to Load Manifest';
+        selectionMeta.textContent = 'Could not load data/index.json. Check browser console or local web server.';
+      }
+    }
+
+    // Event Listeners
+    roundSelect.addEventListener('change', () => selectRound(roundSelect.value));
+
+    prevPlotBtn.addEventListener('click', () => navigatePlot(-1));
+    nextPlotBtn.addEventListener('click', () => navigatePlot(1));
+
+    fullscreenBtn.addEventListener('click', openLightbox);
+    plotImage.addEventListener('click', openLightbox);
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
     });
+
+    sidebarToggleBtn.addEventListener('click', toggleMobileSidebar);
+    if (sidebarCloseBtn) sidebarCloseBtn.addEventListener('click', closeMobileSidebar);
+    sidebarBackdrop.addEventListener('click', closeMobileSidebar);
+
+    // Keyboard navigation: cycle per sidebar order
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigatePlot(-1);
+      if (e.key === 'ArrowRight') navigatePlot(1);
+    });
+
+    // Initialize Dashboard
+    loadDashboard();
   </script>
 </body>
 </html>
