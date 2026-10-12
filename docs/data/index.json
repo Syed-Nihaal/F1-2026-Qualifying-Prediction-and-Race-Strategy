@@ -319,6 +319,26 @@
       ]
     },
     {
+      "name": "R17 Singapore GP 2026",
+      "slug": "r17_singapore_gp_2026",
+      "plots": [
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_compound_performance.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_fastest_telemetry_speed_vs_distance.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_lap_time_distribution.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_lap_time_progression_by_session.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_laps_per_driver_compound.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_laptime_by_tracktemp_compound.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_qualifying_model_comparison.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_qualifying_sensitivity.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_race_strategy.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_speed_colored_track_map.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_speed_trap_trends.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_stint_pace_trends.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_thermal_degradation_eda.svg",
+        "data/r17_singapore_gp_2026/plots/f1_2026_Singapore_gp_tyre_degradation_model_comparison.svg"
+      ]
+    },
+    {
       "name": "T1&2 Bahrain 2026",
       "slug": "t1_2_bahrain_2026",
       "plots": [
